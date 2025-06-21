@@ -1,0 +1,16 @@
+{
+    "welcome": "Welcome to TimeTracker",
+    "start_tracking": "Start Tracking",
+    "view_history": "View History",
+    "settings": "Settings",
+    "timer": "{{minutes}}:{{seconds}}",
+    "save": "Save",
+    "pause": "Pause",
+    "start": "Start",
+    "history": "History",
+    "time_zone": "Time Zone",
+    "language": "Language",
+    "upgrade_pro": "Upgrade to TimeTracker Pro",
+    "success": "Success",
+    "pro_purchased": "TimeTracker Pro purchased"
+}

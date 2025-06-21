@@ -1,0 +1,16 @@
+{
+    "welcome": "TimeTrackerへようこそ",
+    "start_tracking": "トラッキングを開始",
+    "view_history": "履歴を見る",
+    "settings": "設定",
+    "timer": "{{minutes}}:{{seconds}}",
+    "save": "保存",
+    "pause": "一時停止",
+    "start": "開始",
+    "history": "履歴",
+    "time_zone": "タイムゾーン",
+    "language": "言語",
+    "upgrade_pro": "TimeTracker Proにアップグレード",
+    "success": "成功",
+    "pro_purchased": "TimeTracker Proを購入しました"
+}

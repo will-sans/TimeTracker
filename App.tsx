@@ -1,22 +1,30 @@
-import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import HomeScreen from './src/screens/HomeScreen';
-import TimerScreen from './src/screens/TimerScreen';
-import HistoryScreen from './src/screens/HistoryScreen';
-import SettingsScreen from './src/screens/SettingsScreen';
+import React, { Suspense, useEffect, useState } from 'react';
+   import { Text } from 'react-native';
+   import './src/i18n'; // Initialize i18next
+   import AppNavigator from './src/navigation/AppNavigator';
+   import i18n from './src/i18n';
 
-const Stack = createNativeStackNavigator();
+   export default function App() {
+     const [isI18nReady, setIsI18nReady] = useState(false);
 
-export default function App() {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'TimeTracker' }} />
-        <Stack.Screen name="Timer" component={TimerScreen} options={{ title: 'Track Time' }} />
-        <Stack.Screen name="History" component={HistoryScreen} options={{ title: 'History' }} />
-        <Stack.Screen name="Settings" component={SettingsScreen} options={{ title: 'Settings' }} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
-}
+     useEffect(() => {
+       const checkInitialization = async () => {
+         if (!i18n.isInitialized) {
+           await i18n.init(); // 手動初期化を強制
+           console.log('i18next initialized manually:', i18n.language);
+         }
+         setIsI18nReady(true);
+       };
+       checkInitialization().catch((err) => console.error('Initialization error:', err));
+     }, []);
+
+     if (!isI18nReady) {
+       return <Text>Loading...</Text>;
+     }
+
+     return (
+       <Suspense fallback={<Text>Loading translations...</Text>}>
+         <AppNavigator />
+       </Suspense>
+     );
+   }
