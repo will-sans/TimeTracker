@@ -12,5 +12,12 @@
     "language": "言語",
     "upgrade_pro": "TimeTracker Proにアップグレード",
     "success": "成功",
-    "pro_purchased": "TimeTracker Proを購入しました"
+    "pro_purchased": "TimeTracker Proを購入しました",
+    "pro_only": "Pro版のみ",
+    "export_csv": "CSVをエクスポート",
+    "total_time_by_category": "カテゴリ別合計時間",
+    "monthly_trends": "月次トレンド",
+    "productivity_trends": "生産性トレンド",
+    "new_category": "新しいカテゴリ",
+    "add_category": "カテゴリを追加"
 }

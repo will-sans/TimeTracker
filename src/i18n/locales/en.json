@@ -12,5 +12,12 @@
     "language": "Language",
     "upgrade_pro": "Upgrade to TimeTracker Pro",
     "success": "Success",
-    "pro_purchased": "TimeTracker Pro purchased"
+    "pro_purchased": "TimeTracker Pro purchased",
+    "pro_only": "Pro version only",
+    "export_csv": "Export CSV",
+    "total_time_by_category": "Total Time by Category",
+    "monthly_trends": "Monthly Trends",
+    "productivity_trends": "Productivity Trends",
+    "new_category": "New Category",
+    "add_category": "Add Category"
 }
